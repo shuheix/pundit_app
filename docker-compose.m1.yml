@@ -21,8 +21,8 @@ services:
       - 3000:3000
     depends_on:
       - db
-      - sidekiq
-      - stripe-mock
+#      - sidekiq
+#      - stripe-mock
     env_file:
       - .env
     environment:
@@ -31,20 +31,20 @@ services:
     stdin_open: true
     tty: true
 
-  sidekiq:
-    restart: always
-    image: prob-works_app
-    command: sidekiq
-    volumes:
-      - ./:/app
-      - ignore_dir:/app/tmp
-      - ignore_dir:/app/public
-    depends_on:
-      - redis
-    env_file:
-      - .env
-    environment:
-      RAILS_ENV: development
+#  sidekiq:
+#    restart: always
+#    image: prob-works_app
+#    command: sidekiq
+#    volumes:
+#      - ./:/app
+#      - ignore_dir:/app/tmp
+#      - ignore_dir:/app/public
+#    depends_on:
+#      - redis
+#    env_file:
+#      - .env
+#    environment:
+#      RAILS_ENV: development
 
   db:
     restart: always
@@ -57,8 +57,8 @@ services:
     volumes:
       - ./tmp/db/data:/var/lib/postgresql/data
 
-  redis:
-    image: redis:5
-
-  stripe-mock:
-    image: stripemock/stripe-mock:v0.98.0
+#  redis:
+#    image: redis:5
+#
+#  stripe-mock:
+#    image: stripemock/stripe-mock:v0.98.0
