@@ -1,0 +1,5 @@
+# ./config/auth0.yml
+development:
+  auth0_domain: dev-45gz8rrr.us.auth0.com
+  auth0_client_id: 6RVzQBAbnMmUF5IwsspkonIp3L4t4QAG
+  auth0_client_secret: <YOUR AUTH0 CLIENT SECRET>
