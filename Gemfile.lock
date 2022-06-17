@@ -192,6 +192,8 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     regexp_parser (2.5.0)
+    ruby-debug-ide (0.7.3)
+      rake (>= 0.8.1)
     ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
     selenium-webdriver (3.142.7)
@@ -245,6 +247,7 @@ DEPENDENCIES
   puma (~> 4.1)
   rack-cors
   rails (~> 6.0.5)
+  ruby-debug-ide
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)

@@ -1,7 +1,7 @@
 class AuthenticationService
   def self.authenticate_account_with_password!(email, password)
     account = Account.find_by(email: email)&.authenticate(password)
-    raise AuthenticationError if user.nil
+    raise AuthenticationError if account.nil?
     account
   end
 

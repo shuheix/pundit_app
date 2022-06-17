@@ -1,11 +1,11 @@
 class ApplicationController < ActionController::API
   include ActionController::Cookies
   include Authenticatable
-  before_action :authenticate_with_token!
+
 
   rescue_from AuthenticationError, with: :render_unauthorized_error
 
   def render_unauthorized_error
-    render json: { message: 'unauthorized' }, status: :unauthorized
-  end
+       render json: { message: 'unauthorized' }, status: :unauthorized
+    end
 end
