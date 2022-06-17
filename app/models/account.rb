@@ -6,4 +6,6 @@ class Account < ApplicationRecord
   has_many :company, through: :company_account
   has_many :account_groups
   has_many :groups, through: :account_groups
+
+  has_secure_password
 end
