@@ -10,6 +10,10 @@ module Authenticatable
     nil
   end
 
+  def current_user
+    current_account
+  end
+
   def unauthorized?
     current_account.nil?
   end
