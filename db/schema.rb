@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_17_103602) do
+ActiveRecord::Schema.define(version: 2022_06_19_191146) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -86,6 +86,7 @@ ActiveRecord::Schema.define(version: 2022_06_17_103602) do
     t.bigint "company_id", null: false
     t.bigint "group_id"
     t.bigint "account_id"
+    t.boolean "is_archived", default: false, comment: "archiveされているか"
     t.index ["account_id"], name: "index_notes_on_account_id"
     t.index ["company_id"], name: "index_notes_on_company_id"
     t.index ["group_id"], name: "index_notes_on_group_id"
