@@ -6,6 +6,11 @@ module Api
       render json: accounts
     end
 
+    def show
+      account = Account.find(params[:id])
+      render json: account
+    end
+
     def create
       account = Account.new(set_account)
       authorize :account
