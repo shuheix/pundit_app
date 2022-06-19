@@ -13,6 +13,10 @@ class NotePolicy < ApplicationPolicy
       @scope = scope
     end
 
+    def index?
+      scope.all
+    end
+
     def resolve
 
     end

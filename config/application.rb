@@ -10,7 +10,7 @@ module App
   class Application < Rails::Application
     config.api_only = true
     # Initialize configuration defaults for originally generated Rails version.
-    config.autoload_paths << "#{Rails.root}/lib"
+    config.autoload_paths << "#{Rails.root}/app/auth"
     config.load_defaults 6.0
     config.session_store :cookie_store, key: '_interslice_session'
     config.middleware.use ActionDispatch::Cookies # Required for all session management
