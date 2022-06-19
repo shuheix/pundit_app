@@ -70,6 +70,29 @@ accounts = [{
 ]
 Account.create(accounts)
 
+# role
+Role.create([
+              {name: "admin"},
+              {name: "leader"},
+              {name: "engineer"},
+              {name: "common"}
+            ])
+#
+
+mackeee = Account.find_by(email: "mackeee")
+mackeee.add_role :admin
+taku = Account.find_by(email: "taku")
+taku.add_role :leader
+nozomi = Account.find_by(email: "nozomi")
+nozomi.add_role :leader
+yossei = Account.find_by(email: "yossei")
+yossei.add_role :engineer
+kazu = Account.find_by(email: "kazu")
+kazu.add_role :engineer
+shuhei = Account.find_by(email: "shuhei")
+shuhei.add_role :engineer
+tateno = Account.find_by(email: "tateno")
+tateno.add_role :common
 
 # 会社にのみ紐づくノート
 10.times do |n|
