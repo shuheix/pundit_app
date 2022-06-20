@@ -101,7 +101,7 @@ end
 
 # 会社とグループに紐づくノート
 10.times do |n|
-  Note.create(title: "#{n}company_and_group", content: "#{n}company_and_group", company: Company.find(1), group: Group.find(1..2))
+  Note.create(title: "#{n}company_and_group", content: "#{n}company_and_group", company: Company.find(1), group: Group.find(rand(1..2)))
 end
 
 #

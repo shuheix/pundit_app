@@ -22,9 +22,9 @@ class NotePolicy < ApplicationPolicy
 
     def resolve
       if @user.company.first == Company.find_by(name: "SIMULA")
-        Note.all
+        scope.all
       else
-        Note.all.where(is_archived: false)
+        scope.all.where(is_archived: false)
       end
     end
   end

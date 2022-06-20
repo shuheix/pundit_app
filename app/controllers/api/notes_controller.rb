@@ -3,12 +3,13 @@ module Api
     before_action :authenticate_with_token!
 
     def index
+      # authorize Note
       notes = policy_scope(Note)
       render json: notes, status: :ok
     end
 
     def show
-      note = Note.find(params[:id])
+      note = policy_scope(Note).find(params[:id])
       render json: note
     end
 
